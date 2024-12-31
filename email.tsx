@@ -7,6 +7,5 @@ export const EmailComponent = ({}: EmailComponentProps) => {
   return <Html></Html>;
 };
 
-EmailComponent.PreviewProps = {} as EmailComponentProps;
-
 export default EmailComponent;
+export const PreviewProps = {} as EmailComponentProps;

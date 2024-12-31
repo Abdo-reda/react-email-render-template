@@ -1,8 +1,7 @@
-import EmailTemplate from "./email";
-import { PreviewProps } from "./email";
+const EmailImport = await import('./email');
 
 function App() {
-  return <EmailTemplate {...PreviewProps} />;
+  return <EmailImport.default {...EmailImport.PreviewProps} />;
 }
 
 export default App;

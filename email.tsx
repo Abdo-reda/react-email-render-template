@@ -1,11 +1,15 @@
 import { Html } from "@react-email/components";
 import * as React from "react";
 
-interface EmailComponentProps {}
+interface EmailComponentProps {
+  name: string;
+}
 
-export const EmailComponent = ({}: EmailComponentProps) => {
-  return <Html></Html>;
+export const EmailComponent = (props: EmailComponentProps) => {
+  return <Html> Hello, {props.name} </Html>;
 };
 
 export default EmailComponent;
-export const PreviewProps = {} as EmailComponentProps;
+export const PreviewProps: EmailComponentProps = {
+  name: "React Email"
+};

@@ -15,7 +15,7 @@ class ErrorBoundary extends Component {
   static getDerivedStateFromError(error) {
     let errorMsg = "";
     if (error instanceof Error) {
-      errorMsg = error.message;
+      errorMsg = `${error.name}: ${error.message}`; 
     } else if (typeof error === "string") {
       errorMsg = error;
     }
@@ -26,7 +26,6 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-		console.log('-0-00-', this.state.errorMsg)
       return <ErrorViewComponent errorMsg={this.state.errorMsg} />;
     }
     return this.props.children;

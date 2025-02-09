@@ -2,7 +2,7 @@
   "name": "react-email-render-template",
   "type": "module",
   "scripts": {
-    "dev": "cross-env PORT=7777 node server"
+    "dev": "node server 7777"
   },
   "dependencies": {
     "@react-email/components": "^0.0.31",
@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react-swc": "^3.7.2",
-    "cross-env": "^7.0.3",
     "vite": "^6.0.5"
   }
 }

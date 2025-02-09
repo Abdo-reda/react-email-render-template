@@ -3,22 +3,13 @@ import express from 'express'
 import { Transform } from 'node:stream'
 
 // Constants
-const isProduction = process.env.NODE_ENV === 'production'
-const port = process.env.PORT || 5173
+const port = process.argv.splice(2)[0] || 7777
 const base = process.env.BASE || '/'
 const ABORT_DELAY = 10000
 
-// Cached production assets
-const templateHtml = isProduction
-  ? await fs.readFile('./dist/client/index.html', 'utf-8')
-  : ''
-
-// Create http server
 const app = express()
 
 const { createServer } = await import('vite')
-// Add Vite or respective production middlewares
-/** @type {import('vite').ViteDevServer | undefined} */
 
 const vite = await createServer({
   server: { middlewareMode: true },

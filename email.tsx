@@ -6,7 +6,7 @@ interface EmailComponentProps {
 }
 
 export const EmailComponent = (props: EmailComponentProps) => {
-  return <Html> Hello, {props.name} </Html>;
+  return <Html> Hello, wwww {props.name} </Html>;
 };
 
 export default EmailComponent;

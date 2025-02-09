@@ -2,15 +2,20 @@
   "name": "react-email-render-template",
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite --port=4001",
+    "server": "tsx watch server 3001"
   },
   "dependencies": {
     "@react-email/components": "^0.0.31",
+    "express": "^4.21.2",
+    "fastify": "^5.2.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "vite-express": "^0.20.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react-swc": "^3.7.2",
+    "tsx": "^4.19.2",
     "vite": "^6.0.5"
   }
 }
